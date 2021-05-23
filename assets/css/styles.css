@@ -6,6 +6,10 @@
 
 html {
     font-family: Garamond, serif;
+    /* We set the font-size directly here 
+    and then use rem in the rest of the css
+    in line with the advice given here:
+    https://stackoverflow.com/questions/6905834/should-i-set-the-default-font-size-on-the-body-or-html-element */
     font-size: 21px;
     color: #282828;
     background-color: #FFF9F5;
