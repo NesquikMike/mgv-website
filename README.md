@@ -17,6 +17,7 @@ I am a fan of the Data Journalism done by the Financial Times, so I wanted a [co
 The color palette was generated using [](http://colormind.io/bootstrap/) with Old Lace as the main color. 
 
 |Use Case|Colour|Notes|
+--- | --- | ---
 |Main brand color|#FFF1E0||
 |Light color|#F0F1F3|Use this color as the background for dark-on-light designs, or the text color of an inverted design.|
 |Dark color|#5E6D8F|Use as the text color for dark-on-light designs, or as the background for inverted designs.|
