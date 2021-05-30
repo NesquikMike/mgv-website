@@ -1,6 +1,7 @@
 exports.data = {
-    title: "Blog"
-}
+    // title: "Blog",
+    layout: "base-layout.11ty.js"
+};
 
 exports.render = function(data) {
     return `
@@ -13,5 +14,6 @@ exports.render = function(data) {
     </li>`
     ).join("\n")}
 </ul>
+<p>poop</p>
     `;
 };
