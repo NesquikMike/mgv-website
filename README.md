@@ -2,6 +2,10 @@
 
 This blog is built using [eleventy](https://www.11ty.io/docs/).
 
+To serve it for development purposes run `npm run serve`.
+
+To build it for a production release run `npm run build`.
+
 ## Design Choices
 
 ### Font
