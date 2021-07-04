@@ -47,7 +47,7 @@ module.exports = function(data) {
       <ul class="list-nav">
         <li><a class="nav-link" href="/blog/">Blog</a></li>
         <li><a class="nav-link" href="/projects/">Projects</a></li>
-        <li><a class="nav-link" href="assets/resume/beth_archibald_cv.pdf" download>CV</a></li>
+        <li><a class="nav-link" href="assets/cv/beth_archibald_cv.pdf" download>CV</a></li>
         <li><a class="nav-link" href="https://github.com/NesquikMike">GitHub</a></li>
         <li><a class="nav-link" href='https://www.linkedin.com/in/michael-gomes-vieira-92865129/'>LinkedIn</a></li>
       </ul>
@@ -58,7 +58,6 @@ module.exports = function(data) {
       <h1>${data.title}</h1>
       ${data.content}
     </div>
-    <footer>Site Footer</footer>
   </main>
 </body>
 </html>
