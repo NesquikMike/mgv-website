@@ -100,3 +100,14 @@ footer {
 p {
     margin: 1rem 0rem;
 }
+
+.data-content > p > a {
+    color: #BA7781;
+}
+
+.profile-pic {
+    width: 40%;
+    display: inline;
+    float: right;
+    margin-left: 36px;
+}
