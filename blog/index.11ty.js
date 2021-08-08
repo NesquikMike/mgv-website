@@ -1,10 +1,11 @@
 exports.data = {
-    // title: "Blog",
+    title: "Blog Posts",
     layout: "base-layout.11ty.js"
 };
 
 exports.render = function(data) {
     return `
+<br>
 <ul>
   ${data.collections.posts.map(blog =>
     `<li>
@@ -14,6 +15,5 @@ exports.render = function(data) {
     </li>`
     ).join("\n")}
 </ul>
-<p>poop</p>
     `;
 };
