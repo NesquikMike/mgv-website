@@ -1,7 +1,7 @@
 ---
 title: Does Advertising Actually Work? A Case Study of the UKs New Ultrafast Grocery Delivery Services
-date: 2021-05-30
-layout: base-layout.11ty.js
+date: 2021-06-01
+layout: blog-post.11ty.js
 ---
 
 In the last half a dozen months two things have happened: I listened to a couple of Freakonomics podcasts that [casted doubt on the effectiveness of advertising](https://freakonomics.com/podcast/advertising-part-1/){target="_blank rel="noopener"}; and [several new companies offering Ultrafast Delivery Services launched in London](https://www.thegrocer.co.uk/online/getir-weezy-and-zapp-the-rapid-delivery-players-leaving-deliveroo-in-the-dust/654345.article). 
