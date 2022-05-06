@@ -2,6 +2,7 @@
 // Link: https://giuliachiola.dev/posts/add-html-classes-to-11ty-markdown-content/
 const markdownIt = require('markdown-it')
 const markdownItAttrs = require('markdown-it-attrs')
+const markdownItFootnote = require('markdown-it-footnote')
 
 const striptags = require("striptags");
 
@@ -11,7 +12,7 @@ const markdownItOptions = {
     linkify: true
 }
 
-const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs)
+const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs).use(markdownItFootnote)
 
 module.exports = function(eleventyConfig) {
 

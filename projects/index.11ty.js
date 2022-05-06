@@ -5,7 +5,6 @@ exports.data = {
 
 exports.render = function(data) {
 //     return `
-// <br>
 // <ul>
 //   ${data.collections.projects.map(project =>
 //     `<li>
