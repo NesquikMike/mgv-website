@@ -1,5 +1,5 @@
 ---
-title: What I Learnt Doing Stand-Up Comedy 
+title: Seven Things I Learnt Doing Stand-Up Comedy 
 date: 2022-05-01
 layout: blog-post.11ty.js
 ---
