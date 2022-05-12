@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx eleventy",
-    "serve": "npx eleventy --serve --port=8080",
+    "serve": "npx kill-port 8080; npx eleventy --serve --port=8080",
     "kill": "npx kill-port 8080",
     "debug": "DEBUG=* npx eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
