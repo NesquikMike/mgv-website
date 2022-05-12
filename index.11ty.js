@@ -5,7 +5,7 @@ exports.data = {
 
 exports.render = function(data) {
     return `<ul class='blog-posts'>
-      ${data.collections.posts.map(blog =>
+      ${data.collections.posts.reverse().map(blog =>
         `<li>
           <time>${blog.date.toLocaleDateString('en-UK', data.myProject.dateStringOptions)}</time>
           <a href="${blog.url}">${blog.data.title}</a>
