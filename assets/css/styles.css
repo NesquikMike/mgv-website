@@ -12,7 +12,7 @@ html {
   https://stackoverflow.com/questions/6905834/should-i-set-the-default-font-size-on-the-body-or-html-element */
   font-size: 21px;
   color: #585858;
-  background-color: #FFF9F5;
+  background-color: #FFF1E0;
 }
 
 body {
@@ -27,7 +27,7 @@ header {
   /* Grid system used to get fixed header with guidance from this article:
   https://css-tricks.com/how-to-use-css-grid-for-sticky-headers-and-footers/ */
   display: flex;
-  background-color: #FFF9F5;
+  background-color: #FFF1E0;
   justify-content: space-around;
   border-bottom-style: solid;
   border-width: 1px;
@@ -141,6 +141,23 @@ a {
 
 img {
   width: 100%;
+}
+
+.captioned-image {
+  display: flex;
+  flex-direction: column;
+}
+
+.captioned-image > img {
+  margin-bottom: 0%;
+}
+
+figcaption {
+  width: fit-content;
+  font-size: 0.65rem;
+  background-color: #5E6D8F;
+  color: #F0F1F3;
+  padding: 2px 2px;
 }
 
 .footnote-item {

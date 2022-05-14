@@ -18,6 +18,8 @@ Garamond has been chosen as font for the website. This is because it is a websaf
 
 I am a fan of the Data Journalism done by the Financial Times, so I wanted a [colour scheme that would reference the publication](https://www.schemecolor.com/financial-times-web-site.php). I have chosen to use Old Lace (#FFF1E0) as my main colour for the website. 
 
+NB. Was previously using #FFF9F5.
+
 The color palette was generated using [](http://colormind.io/bootstrap/) with Old Lace as the main color. 
 
 |Use Case|Colour|Notes|
