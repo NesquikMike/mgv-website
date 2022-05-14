@@ -1,6 +1,6 @@
 ---
 title: Today's Nest Eggs Might Be Rotten By Tomorrow
-date: 2021-06-01
+date: 2022-06-01
 layout: blog-post.11ty.js
 ---
 
