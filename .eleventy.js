@@ -26,6 +26,7 @@ module.exports = function(eleventyConfig) {
     // This is detailed here: https://keepinguptodate.com/pages/2019/06/creating-blog-with-eleventy/
     eleventyConfig.addShortcode("excerpt", (article) => extractExcerpt(article));
 
+    eleventyConfig.setUseGitIgnore(false);
 }
 
 // This is used to demark the excerpts of the blog post that are used to
