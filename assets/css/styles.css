@@ -113,7 +113,7 @@ footer {
 }
 
 time {
-  margin: 1rem 0rem;
+  margin: 0.5rem 0rem;
   font-size: 0.65rem;
   font-weight: 300;
 }
@@ -152,12 +152,17 @@ img {
   margin-bottom: 0%;
 }
 
+.captioned-image > a {
+  /* display is flex so in figcaptions the caption lines up with photo */
+  display: flex;
+}
+
 figcaption {
   width: fit-content;
   font-size: 0.65rem;
   background-color: #5E6D8F;
   color: #F0F1F3;
-  padding: 2px 2px;
+  padding: 2px 3px;
 }
 
 .footnote-item {
