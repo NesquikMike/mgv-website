@@ -11,7 +11,7 @@ layout: blog-post.11ty.js
   <figcaption>Coming on Stage for my Set.</figcaption>
 </figure>
 
-From March to April 2022 I took part in a 6 week stand-up comedy course for beginners at [The Comedy Store](https://www.thecomedystore.co.uk/){target="_blank rel="noopener"} in Central London. At the end of the course, [myself](https://www.youtube.com/watch?v=6miCy-nmXIY){target="_blank rel="noopener"} and the other comedians [performed a 5 minute set in front of an audience of over 150 people](https://www.youtube.com/watch?v=6miCy-nmXIY){target="_blank rel="noopener"}. Here are some of the things that I learnt from taking part in the course. 
+From March to April 2022 I took part in a 6 week stand-up comedy course for beginners at [The Comedy Store](https://www.thecomedystore.co.uk/){target="_blank" rel="noopener"} in Central London. At the end of the course, [myself](https://www.youtube.com/watch?v=6miCy-nmXIY){target="_blank" rel="noopener"} and the other comedians [performed a 5 minute set in front of an audience of over 150 people](https://www.youtube.com/watch?v=6miCy-nmXIY){target="_blank" rel="noopener"}. Here are some of the things that I learnt from taking part in the course. 
 
 ## 1. Writing Jokes is Hard, but Surprisingly Logical
 Most of what is funny in conversation with friends is not funny in stand-up. 
@@ -64,9 +64,9 @@ There is often a very mechanical logic to what makes a joke funny; but, it's oft
 
 Often I was surprised; some jokes were much funnier than I expected whereas others got no response at all. 
 
-Some of the most successful stand up comics like [Chris Rock](https://www.hollywood.com/general/chris-rock-surprises-comedy-club-crowd-with-impromptu-set-60761287) still perform at small clubs. They're testing new material to gauge how funny it is so that they can continue iterating before an upcoming big show.
+Some of the most successful stand up comics like [Chris Rock](https://www.hollywood.com/general/chris-rock-surprises-comedy-club-crowd-with-impromptu-set-60761287){target="_blank" rel="noopener"} still perform at small clubs. They're testing new material to gauge how funny it is so that they can continue iterating before an upcoming big show.
 
-However, the beginning of this process is painful. In week 3 and 4 of the course we started testing jokes on the [instructor](https://en.wikipedia.org/wiki/Mike_Gunn) and our fellow comics. We were all taken aback by how difficult it is to get a response from our audience. It was a brutal experience for us all.
+However, the beginning of this process is painful. In week 3 and 4 of the course we started testing jokes on the [instructor](https://en.wikipedia.org/wiki/Mike_Gunn){target="_blank" rel="noopener"} and our fellow comics. We were all taken aback by how difficult it is to get a response from our audience. It was a brutal experience for us all.
 
 One comedian remarked to me how these lessons felt like being "run over by a car." 
 
@@ -99,20 +99,20 @@ His set was terrible and there was no time to improve it before the show. As he 
 Ultimately, his performance was as funny as a dead dog. Backstage after the show he was lamenting that he felt his performance had been so much funnier in rehearsals. Some of the other performers might have been relieved that he didn't get cold feet about performing as they weren't much better. 
 
 ## 6. Have a Weirdness
-Robert Greene's 46th law in his book *The 48 Laws of Power* is to never appear too perfect. "[It is smart to occasionally display defects, and admit to harmless vices, in order to... appear more human and approachable](https://www.goodreads.com/quotes/246815-law-46-never-appear-too-perfect-appearing-better-than-others)."
+Robert Greene's 46th law in his book *The 48 Laws of Power* is to never appear too perfect. "[It is smart to occasionally display defects, and admit to harmless vices, in order to... appear more human and approachable](https://www.goodreads.com/quotes/246815-law-46-never-appear-too-perfect-appearing-better-than-others){target="_blank" rel="noopener"}."
 
 Part of the reason why my set and Rajesh's were so well liked is that we tapped into our defects and harmless vices. 
 
 People can't help but find eccentrics ammusing. It's reassuring to see people so much odder than us embarass themselves by openly displaying their eccentricity in public. They put us at ease and we take pleasure from their unusual viewpoints and weird behaviours. 
 
-[In my set](https://www.youtube.com/watch?v=6miCy-nmXIY){target="_blank rel="noopener"}, I leveraged my nerdy interest in London Buses. The many unusual aspects of my interest - such as my knowledge of different bus vehicles, something most people barely register - were easily exploitable for joke writing. 
+[In my set](https://www.youtube.com/watch?v=6miCy-nmXIY){target="_blank" rel="noopener"}, I leveraged my nerdy interest in London Buses. The many unusual aspects of my interest - such as my knowledge of different bus vehicles, something most people barely register - were easily exploitable for joke writing. 
 
 Playing into my weirdness made for one of the most memorable acts. Everyone remembered the "bus guy". 
 
 ## 7. Let the Audience Laugh
 As inexperienced comedians many of us had a tendency to dive right into the next joke as soon as we finished delivering the current joke. We had to be constantly corrected by our instructor to let the audience laugh and wait for the right moment before initiating the next joke. 
 
-Leaving the audience to laugh drastically reduces the amount of material that you need for your set. When I started writing I worried that I wouldn't be able to find enough material to fill what was meant to be a 5 minute set. In order to estimate how much I would need I watched a set of one of my favourite underground comedians and found that he was [burning around 10 seconds on each joke](https://youtu.be/KjlubLWidss?t=38). 
+Leaving the audience to laugh drastically reduces the amount of material that you need for your set. When I started writing I worried that I wouldn't be able to find enough material to fill what was meant to be a 5 minute set. In order to estimate how much I would need I watched a set of one of my favourite underground comedians and found that he was [burning around 10 seconds on each joke](https://youtu.be/KjlubLWidss?t=38){target="_blank" rel="noopener"}. 
 
 The time in which the audience is laughing is useful to allow yourself to remember the next joke. But, it felt like cheating that I would spend so much time of my set doing nothing. 
 
