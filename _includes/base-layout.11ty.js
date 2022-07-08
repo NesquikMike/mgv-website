@@ -37,21 +37,21 @@ module.exports = function(data) {
 <body>
   <header>
     <h1><a class="nav-link" href="/">Michael Gomes Vieira</a></h1>
-    <nav>
-      <input type="checkbox" id="nav-check"/>
-      <div class="nav-btn">
-        <label for="nav-check">
-          <img src="assets/img/hamburger_button.png" height="20" width="20" id="menu-burger-button">
-        </label>
-      </div>
-      <ul class="list-nav">
-        <li><a class="nav-link" href="/about/" target="_blank rel=noopener&quot;">About</a></li>
-        <li><a class="nav-link" href="/projects/" target="_blank rel=noopener&quot;">Projects</a></li>
-        <li><a class="nav-link" href="assets/cv/beth_archibald_cv.pdf" download>CV</a></li>
-        <li><a class="nav-link" href="https://github.com/NesquikMike" target="_blank rel=noopener&quot;">GitHub</a></li>
-        <li><a class="nav-link" href='https://www.linkedin.com/in/michael-gomes-vieira-92865129/' target="_blank rel=noopener&quot;">LinkedIn</a></li>
-      </ul>
-    </nav> 
+    <input type="checkbox" id="nav-check"/>
+    <div class="nav-btn">
+      <label class="hamburger-button" for="nav-check">
+        <div></div>
+        <div></div>
+        <div></div>
+      </label>
+    </div>
+    <ul class="list-nav">
+      <li><a class="nav-link" href="/about/" target="_blank rel=noopener&quot;">About</a></li>
+      <li><a class="nav-link" href="/projects/" target="_blank rel=noopener&quot;">Projects</a></li>
+      <li><a class="nav-link" href="assets/cv/beth_archibald_cv.pdf" download>CV</a></li>
+      <li><a class="nav-link" href="https://github.com/NesquikMike" target="_blank rel=noopener&quot;">GitHub</a></li>
+      <li><a class="nav-link" href='https://www.linkedin.com/in/michael-gomes-vieira-92865129/' target="_blank rel=noopener&quot;">LinkedIn</a></li>
+    </ul>
   </header>
   <main>
     <div class="data-content">

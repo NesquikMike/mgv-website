@@ -4,11 +4,11 @@ exports.data = {
 };
 
 exports.render = function(data) {
-    return `<ul class='blog-posts'>
+    return `<ul id='blog-posts'>
       ${data.collections.posts.reverse().map(blog =>
         `<li>
           <time>${blog.date.toLocaleDateString('en-UK', data.myProject.dateStringOptions)}</time>
-          <a href="${blog.url}">${blog.data.title}</a>
+          <a href="${blog.url}"><h2>${blog.data.title}</h2></a>
           <p>${this.excerpt(blog)}</p>
         </li>`
         ).join("\n")}
