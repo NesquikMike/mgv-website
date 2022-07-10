@@ -45,7 +45,7 @@ Ultimately, by staying in our bubble we're missing out. Knowing our colleagues o
 The lines between work time and home time have become much more blurry with WFH.  It is not just us either: [a study of real-time data from millions of GitHub users found that work was often being re-allocated from the traditional 9-6pm weekday hours to evenings and even weekends.](https://www.nber.org/system/files/working_papers/w29598/w29598.pdf){target="_blank" rel="noopener"} Life is losing the punctuation points between work and leisure that we have enjoyed in the past.
 
 <figure class="captioned-image">
-  <img src="/assets/images/posts/the-hidden-costs-of-wfh/week_rightmove_searches.png" alt="Trends in weekly Rightmove searches"></img>
+  <img src="/assets/images/posts/what-tech-workers-dont-understand-theyve-lost-by-wfh/week_rightmove_searches.png" alt="Trends in weekly Rightmove searches"></img>
   <figcaption>The peaks of "rightmove" searches start on weekday afternoons.</figcaption>
 </figure>
 
