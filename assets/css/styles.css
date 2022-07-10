@@ -101,7 +101,7 @@ header > h1 {
   }
 
   h1 {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
   }
 
   .hamburger-button {
@@ -138,14 +138,12 @@ header > h1 {
   flex-direction: column;
   list-style-type: none;
   justify-content: space-between;
-  margin: 0rem 0.75rem;
 }
 
 #blog-posts > li {
   display: flex;
   flex-direction: column;
   width: auto;
-  margin: 0px 10px;
 }
 
 .nav-link {
@@ -171,7 +169,7 @@ main {
 .data-content {
   width: 680px;
   grid-area: 1 / 1 / 2 / 1;
-  margin: 2rem 0rem;
+  margin: 1rem 0rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -279,15 +277,20 @@ ol > li {
   border: solid 2px #5E6D8F;
 }
 
+.project-img {
+  width: 90px;
+  height: 160px;
+}
+
 #projects-list > li:nth-child(even) {
   grid-template-columns: 1fr 90px;
 }
 
-#projects-list > li:nth-child(odd) > .project-img-even {
+#projects-list > li:nth-child(odd) > .project-even {
   display: none;
 }
 
-#projects-list > li:nth-child(even) > .project-img-odd {
+#projects-list > li:nth-child(even) > .project-odd {
   display: none;
 }
 
@@ -301,4 +304,18 @@ ol > li {
 
 .project-para > p > a {
   color: #A9978E;
+}
+
+@media screen and (max-width: 900px)  {
+  #projects-list > li {
+    grid-template-rows: 1fr;
+  }
+
+  .project-img {
+    align-self: center;
+  }
+}
+
+.utterances {
+  min-height: 300px;
 }

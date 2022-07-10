@@ -4,7 +4,8 @@ exports.data = {
 };
 
 exports.render = function(data) {
-    return `<ul id='blog-posts'>
+    return `<h1>Blog Posts</h1>
+    <ul id='blog-posts'>
       ${data.collections.posts.reverse().map(blog =>
         `<li>
           <time>${blog.date.toLocaleDateString('en-UK', data.myProject.dateStringOptions)}</time>
