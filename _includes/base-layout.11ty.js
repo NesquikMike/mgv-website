@@ -33,6 +33,8 @@ module.exports = function(data) {
   <link rel="canonical" href="${data.metadata.url}${data.page.url}">
 
   <script src="assets/js/script.js" type="module"></script>
+  <script data-goatcounter="https://michaelgvcouk.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
   <header>
