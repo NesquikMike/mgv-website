@@ -319,3 +319,9 @@ ol > li {
 .utterances {
   min-height: 300px;
 }
+
+.four04 {
+  text-align: center;
+  align-self: center;
+  margin: 15%;
+}
