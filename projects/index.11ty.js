@@ -1,5 +1,4 @@
 exports.data = {
-    title: "Projects",
     layout: "base-layout.11ty.js"
 };
 
