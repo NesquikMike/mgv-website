@@ -5,7 +5,7 @@ title: About
 
 ![Photo of Michael Gomes Vieira](/assets/images/profile_pic.jpeg){class="profile-pic"}
 
-I live in London and I'm currently working at [Just Eat Takeaway](https://www.justeattakeaway.com/) as a Data Scientist. In my role as a Data Scientist I develop algorithms to automate decision making processes for the business. [You can find my CV here](/assets/cv/beth_archibald_cv.pdf){target="_blank rel="noopener"}.
+I live in London and I'm currently working at [Just Eat Takeaway](https://www.justeattakeaway.com/) as a Data Scientist. In my role as a Data Scientist I develop algorithms to automate decision making processes for the business. [You can find my CV here](/assets/michaelgv_cv.pdf){target="_blank rel="noopener"}.
 
 I previously worked at [Sainsbury's](https://about.sainsburys.co.uk/){target="_blank rel="noopener"} for over three years and have worked on a variety of projects using many different technologies. There are three projects that I'm proudest of during my time at Sainsbury's: a Substitutions algorithm that uses linear programming to optimise substitutes in online orders so that rejections are minimised, while constraining the value of partial refunds given for substitutes that are more expensive than what was ordered; a Prioritisation algorithm that recommends to in-store colleagues which cages of recently delivered stock should be replenished first; and, a Shopper Feedback algorithm that identifies the topics that the shopper has mentioned in their feedback and classifies whether their feedback was positive or negative. 
 

@@ -50,7 +50,7 @@ module.exports = function(data) {
     <ul class="list-nav">
       <li><a class="nav-link" href="/about/" target="_blank rel=noopener&quot;">About</a></li>
       <li><a class="nav-link" href="/projects/" target="_blank rel=noopener&quot;">Projects</a></li>
-      <li><a class="nav-link" href="assets/cv/beth_archibald_cv.pdf" download>CV</a></li>
+      <li><a class="nav-link" href="assets/michaelgv_cv.pdf" download>CV</a></li>
       <li><a class="nav-link" href="https://github.com/NesquikMike" target="_blank rel=noopener&quot;">GitHub</a></li>
       <li><a class="nav-link" href='https://www.linkedin.com/in/michael-gomes-vieira-92865129/' target="_blank rel=noopener&quot;">LinkedIn</a></li>
     </ul>
