@@ -272,9 +272,6 @@ ol > li {
   grid-template-rows: 160px;
   margin: 1rem 0rem;
   column-gap: 10px;
-  background-color: #5E6D8F;
-  color: #F0F1F3;
-  border: solid 2px #5E6D8F;
 }
 
 .project-img {
@@ -294,16 +291,8 @@ ol > li {
   display: none;
 }
 
-.project-info > a {
-  color: #A9978E;
-}
-
 .project-para > p {
   margin: 2px 0px 0px 0px;
-}
-
-.project-para > p > a {
-  color: #A9978E;
 }
 
 @media screen and (max-width: 900px)  {

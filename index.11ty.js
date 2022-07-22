@@ -3,7 +3,7 @@ exports.data = {
 };
 
 exports.render = function(data) {
-    return `<h1>Blog Posts</h1>
+    return `
     <ul id='blog-posts'>
       ${data.collections.posts.reverse().map(blog =>
         `<li>
