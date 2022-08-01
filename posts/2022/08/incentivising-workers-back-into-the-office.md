@@ -1,6 +1,6 @@
 ---
 title: Incentivising Workers Back into the Office
-date: 2021-07-03
+date: 2022-08-01
 layout: blog-post.11ty.js
 ---
 

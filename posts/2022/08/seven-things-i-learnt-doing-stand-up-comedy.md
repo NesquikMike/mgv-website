@@ -1,6 +1,6 @@
 ---
 title: Seven Things I Learnt Doing Stand-Up Comedy 
-date: 2022-07-01
+date: 2022-08-01
 layout: blog-post.11ty.js
 ---
 

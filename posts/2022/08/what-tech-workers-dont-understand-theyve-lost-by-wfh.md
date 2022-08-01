@@ -1,6 +1,6 @@
 ---
 title: What Tech Workers Don't Understand They've Lost by WFH
-date: 2021-06-01
+date: 2022-08-01
 layout: blog-post.11ty.js
 ---
 
