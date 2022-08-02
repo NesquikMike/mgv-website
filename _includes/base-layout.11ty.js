@@ -12,10 +12,10 @@ module.exports = function(data) {
   </script>
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="stylesheet" href="/assets/css/print.css" media="print">
-  <meta name="description" content="${data.metadata.description}" >
+  <meta name="description" content="${this.postDescription(data) ? `${this.postDescription(data)}` : `${data.metadata.description}`}" >
 
   <meta property="og:title" content="${data.title ? `${data.title} | ${data.metadata.title}` : `${data.metadata.title}`}" >
-  <meta proprty="og:description" content="${data.metadata.description}" >
+  <meta proprty="og:description" content="${this.postDescription(data) ? `${this.postDescription(data)}` : `${data.metadata.description}`}" >
   <meta property="og:image" content="" >
   <meta property="og:locale" content="en_GB" >
   <meta property="og:type" content="${data.og_type}" >

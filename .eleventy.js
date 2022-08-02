@@ -30,6 +30,7 @@ module.exports = function(eleventyConfig) {
     // preview the blog post on the home page.
     // This is detailed here: https://keepinguptodate.com/pages/2019/06/creating-blog-with-eleventy/
     eleventyConfig.addShortcode("excerpt", (article) => extractExcerpt(article));
+    eleventyConfig.addShortcode("postDescription", (data) => extractPostDescription(data));
 
     eleventyConfig.setUseGitIgnore(false);
 
@@ -62,7 +63,7 @@ module.exports = function(eleventyConfig) {
 function extractExcerpt(article) {
   if (!article.hasOwnProperty("templateContent")) {
     console.warn(
-      'Failed to extract excerpt: Document has no property "templateContent".'
+      `Failed to extract excerpt: Document ${article.title} has no property "templateContent".`
     );
     return null;
   }
@@ -72,6 +73,21 @@ function extractExcerpt(article) {
 
   excerpt = striptags(content)
     .substring(0, 300) // Cap at 300 characters
+    .replace(/^\s+|\s+$|\s+(?=\s)/g, "")
+    .trim()
+    .concat("...");
+  return excerpt;
+}
+
+function extractPostDescription(data) {
+  if (data.layout !== 'blog-post.11ty.js') {
+    return null;
+  }
+
+
+  excerpt = striptags(data.content)
+    .replace(/^.+[0-9]{4}/s, '')
+    .substring(0, 150) // Cap at 150 characters
     .replace(/^\s+|\s+$|\s+(?=\s)/g, "")
     .trim()
     .concat("...");
