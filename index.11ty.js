@@ -3,8 +3,8 @@ exports.data = {
 };
 
 exports.render = function(data) {
-    // let posts = data.collections.posts.sort((a, b) => b.data.date - a.data.date);
-    let posts = data.collections.posts.reverse();
+    let posts = data.collections.posts.sort((a, b) => b.data.date - a.data.date);
+    
     return `
     <ul id='blog-posts'>
       ${posts.map(blog =>
