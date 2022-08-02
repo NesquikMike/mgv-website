@@ -1,5 +1,6 @@
 exports.data = {
-    layout: "base-layout.11ty.js"
+    layout: "base-layout.11ty.js",
+    title: "Projects"
 };
 
 exports.render = function(data) {

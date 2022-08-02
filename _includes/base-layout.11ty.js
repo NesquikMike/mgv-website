@@ -5,7 +5,7 @@ module.exports = function(data) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Michael Gomes Vieira</title>
+  <title>${data.title ? `${data.title} | ${data.metadata.title}` : `${data.metadata.title}`}</title>
   <script type="module">
     document.documentElement.classList.remove('no-js');
     document.documentElement.classList.add('js');
@@ -14,7 +14,7 @@ module.exports = function(data) {
   <link rel="stylesheet" href="/assets/css/print.css" media="print">
   <meta name="description" content="${data.metadata.description}" >
 
-  <meta property="og:title" content="${data.metadata.title}" >
+  <meta property="og:title" content="${data.title ? `${data.title} | ${data.metadata.title}` : `${data.metadata.title}`}" >
   <meta proprty="og:description" content="${data.metadata.description}" >
   <meta property="og:image" content="" >
   <meta property="og:locale" content="en_GB" >
