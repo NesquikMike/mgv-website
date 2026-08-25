@@ -133,6 +133,11 @@ header > h1 {
   margin: 0px 10px;
 }
 
+.site-intro {
+  margin-bottom: 1rem;
+  max-width: 40rem;
+}
+
 #blog-posts {
   display: flex;
   flex-direction: column;
@@ -193,6 +198,16 @@ p {
   margin: 1rem 0rem;
 }
 
+blockquote {
+  margin: 1rem 0;
+  padding: 0.25rem 1rem;
+  border-left: 3px solid #BA7781;
+}
+
+blockquote p {
+  margin: 0.5rem 0;
+}
+
 iframe {
   margin: 1rem 0rem;
   width: 100%;
@@ -204,9 +219,9 @@ a {
 }
 
 code {
-  background-color: grey;
-  opacity: 90%;
+  background-color: #E8DDD0;
   font-size: 0.9em;
+  padding: 0.1em 0.3em;
 }
 
 .profile-pic {
@@ -269,14 +284,32 @@ ol > li {
 #projects-list > li {
   display: grid;
   grid-template-columns: 90px 1fr;
-  grid-template-rows: 160px;
-  margin: 1rem 0rem;
+  grid-template-rows: minmax(160px, auto);
+  margin: 1.25rem 0rem;
   column-gap: 10px;
+  align-items: start;
+}
+
+.project-info {
+  min-width: 0;
+}
+
+.project-info h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.25;
 }
 
 .project-img {
   width: 90px;
   height: 160px;
+  overflow: hidden;
+}
+
+.project-img img {
+  width: 90px;
+  height: 160px;
+  object-fit: cover;
 }
 
 #projects-list > li:nth-child(even) {
@@ -293,6 +326,7 @@ ol > li {
 
 .project-para > p {
   margin: 2px 0px 0px 0px;
+  line-height: 1.35;
 }
 
 @media screen and (max-width: 900px)  {
@@ -303,6 +337,10 @@ ol > li {
   .project-img {
     align-self: center;
   }
+}
+
+.rss-subscribe {
+  margin: 2rem 0 1rem;
 }
 
 .utterances {

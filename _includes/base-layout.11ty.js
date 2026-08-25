@@ -15,24 +15,29 @@ module.exports = function(data) {
   <meta name="description" content="${this.postDescription(data) ? `${this.postDescription(data)}` : `${data.metadata.description}`}" >
 
   <meta property="og:title" content="${data.title ? `${data.title} | ${data.metadata.title}` : `${data.metadata.title}`}" >
-  <meta proprty="og:description" content="${this.postDescription(data) ? `${this.postDescription(data)}` : `${data.metadata.description}`}" >
-  <meta property="og:image" content="" >
+  <meta property="og:description" content="${this.postDescription(data) ? `${this.postDescription(data)}` : `${data.metadata.description}`}" >
+  <meta property="og:image" content="${this.ogImageUrl(data)}" >
+  <meta property="og:image:width" content="1200" >
+  <meta property="og:image:height" content="630" >
   <meta property="og:locale" content="en_GB" >
   <meta property="og:type" content="${data.og_type}" >
   <meta property="og:url" content="${data.metadata.url}${data.page.url}" >
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="${this.ogImageUrl(data)}" >
 
   <meta name="theme-color" content="#A9978E">
 
-  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/images/favicon-32.png" type="image/png" sizes="32x32">
 
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/my.webmanifest">
 
   <link rel="canonical" href="${data.metadata.url}${data.page.url}">
+  <link rel="alternate" type="application/rss+xml" title="${data.metadata.title}" href="/feed.xml">
 
-  <script src="assets/js/script.js" type="module"></script>
+  <script src="/assets/js/script.js" type="module"></script>
   <script data-goatcounter="https://michaelgvcouk.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -48,11 +53,12 @@ module.exports = function(data) {
       </label>
     </div>
     <ul class="list-nav">
-      <li><a class="nav-link" href="/about/" target="_blank rel=noopener&quot;">About</a></li>
-      <li><a class="nav-link" href="/projects/" target="_blank rel=noopener&quot;">Projects</a></li>
+      <li><a class="nav-link" href="/about/">About</a></li>
+      <li><a class="nav-link" href="/projects/">Projects</a></li>
       <li><a class="nav-link" href="/assets/michaelgv_cv.pdf" download>CV</a></li>
-      <li><a class="nav-link" href="https://github.com/NesquikMike" target="_blank rel=noopener&quot;">GitHub</a></li>
-      <li><a class="nav-link" href='https://www.linkedin.com/in/michael-gomes-vieira-92865129/' target="_blank rel=noopener&quot;">LinkedIn</a></li>
+      <li><a class="nav-link" href="https://github.com/NesquikMike" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a class="nav-link" href="https://www.linkedin.com/in/michael-gomes-vieira-92865129/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a class="nav-link" href="/feed.xml">RSS</a></li>
     </ul>
   </header>
   <main>

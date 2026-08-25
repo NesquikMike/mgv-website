@@ -7,6 +7,7 @@ exports.render = function(data) {
     <h1>${data.title}</h1>
     <time>${data.date.toLocaleDateString('en-UK', data.myProject.dateStringOptions)}</time>
     ${data.content}
+    <p class="rss-subscribe"><a href="/feed.xml">Subscribe via RSS</a></p>
     <script 
       src="https://utteranc.es/client.js"
       repo="NesquikMike/mgv-website"

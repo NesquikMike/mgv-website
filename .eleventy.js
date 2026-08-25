@@ -24,6 +24,10 @@ module.exports = function(eleventyConfig) {
     // This is necessary so that the assets are served and built by eleventy
     // as detailed here: https://michaelsoolee.com/add-css-11ty/
     eleventyConfig.addPassthroughCopy('assets');
+    eleventyConfig.addPassthroughCopy('favicon.ico');
+    eleventyConfig.addPassthroughCopy('favicon.svg');
+    eleventyConfig.addPassthroughCopy('apple-touch-icon.png');
+    eleventyConfig.addPassthroughCopy('my.webmanifest');
     eleventyConfig.setLibrary('md', markdownLib);
 
     // This is used to demark the excerpts of the blog post that are used to
@@ -31,6 +35,7 @@ module.exports = function(eleventyConfig) {
     // This is detailed here: https://keepinguptodate.com/pages/2019/06/creating-blog-with-eleventy/
     eleventyConfig.addShortcode("excerpt", (article) => extractExcerpt(article));
     eleventyConfig.addShortcode("postDescription", (data) => extractPostDescription(data));
+    eleventyConfig.addShortcode("ogImageUrl", (data) => ogImageUrl(data));
 
     eleventyConfig.setUseGitIgnore(false);
 
@@ -79,6 +84,18 @@ function extractExcerpt(article) {
   return excerpt;
 }
 
+function ogImageUrl(data) {
+  const path = data.image || data.metadata.ogImage;
+  if (!path) {
+    return "";
+  }
+  if (/^https?:\/\//i.test(path)) {
+    return path;
+  }
+  const base = data.metadata.url.replace(/\/$/, "");
+  return path.startsWith("/") ? `${base}${path}` : `${base}/${path}`;
+}
+
 function extractPostDescription(data) {
   if (data.layout !== 'blog-post.11ty.js') {
     return null;
@@ -86,7 +103,7 @@ function extractPostDescription(data) {
 
 
   excerpt = striptags(data.content)
-    .replace(/^.+[0-9]{4}/s, '')
+    .replace(/^.+?[0-9]{4}/s, '')
     .substring(0, 150) // Cap at 150 characters
     .replace(/^\s+|\s+$|\s+(?=\s)/g, "")
     .trim()

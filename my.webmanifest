@@ -1,0 +1,15 @@
+{
+  "name": "Michael Gomes Vieira",
+  "short_name": "MGV",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#FFF1E0",
+  "background_color": "#FFF1E0",
+  "display": "browser",
+  "start_url": "/"
+}

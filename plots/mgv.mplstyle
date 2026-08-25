@@ -1,0 +1,50 @@
+# Shared matplotlib style for michaelgv.uk
+# Colours and type match assets/css/styles.css
+
+axes.facecolor: FFF1E0
+figure.facecolor: FFF1E0
+savefig.facecolor: FFF1E0
+savefig.edgecolor: none
+savefig.bbox: tight
+savefig.pad_inches: 0.15
+savefig.dpi: 180
+
+text.color: 585858
+axes.labelcolor: 585858
+axes.edgecolor: 585858
+xtick.color: 585858
+ytick.color: 585858
+
+axes.spines.top: False
+axes.spines.right: False
+axes.linewidth: 0.8
+axes.grid: False
+axes.axisbelow: True
+
+axes.titlesize: 15
+axes.titleweight: normal
+axes.titlelocation: left
+axes.titlepad: 14
+axes.labelsize: 12
+axes.labelpad: 8
+
+xtick.labelsize: 11
+ytick.labelsize: 11
+xtick.major.size: 0
+ytick.major.size: 0
+xtick.minor.size: 0
+ytick.minor.size: 0
+xtick.direction: out
+ytick.direction: out
+
+legend.frameon: False
+legend.fontsize: 11
+
+lines.solid_capstyle: round
+patch.linewidth: 0
+pdf.fonttype: 42
+ps.fonttype: 42
+svg.fonttype: none
+
+font.family: serif
+font.serif: Cormorant Garamond, EB Garamond, Garamond, Liberation Serif, serif
