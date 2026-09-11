@@ -46,5 +46,3 @@ Correlation is not causation. Japan and Italy have high leader turnover even in 
 The aggregate also hides timing. A growth shock in Germany in 2009 does not force a Belgian coalition collapse in the same quarter. Lagging stress by one year is a visual choice as much as a statistical one: it lets a growth drop appear before the political response on the chart.
 
 Still, the pattern fits a simple story. When living standards stop improving on the timetable voters have come to expect, governments that promised competence start looking disposable. Britain's revolving door is an extreme case. The Western average suggests something broader shifted after the 2000s calm.
-
-I have almost certainly missed an override or two; corrections welcome.
