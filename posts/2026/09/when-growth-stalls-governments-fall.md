@@ -1,5 +1,5 @@
 ---
-title: When Growth Stalls, Governments Fall
+title: I Checked 20 Democracies. Growth Stress Beat Ideology.
 date: 2026-09-11
 layout: blog-post.11ty.js
 ---
