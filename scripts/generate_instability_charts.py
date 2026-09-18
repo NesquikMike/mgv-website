@@ -19,6 +19,16 @@ GRAY_MED = "#A9978E"
 GRAY_LIGHT = "#E8DDD0"
 PLOT_START = pd.Timestamp("1950-01-01")
 PLOT_WINDOWS = [5, 10]
+# Sized for ~680px article width; fonts must stay readable after scaling.
+FIG_W = 6.8
+FIG_H_SINGLE = 3.5
+FIG_H_DUAL = 3.9
+DPI = 200
+TITLE_SIZE = 22
+SUBTITLE_SIZE = 15
+LABEL_SIZE = 14
+TICK_SIZE = 13
+LEGEND_SIZE = 13
 WINDOW_STYLE = {
     10: {"color": ACCENT, "linewidth": 2.8, "alpha": 1.0, "label": "10-year"},
     5: {"color": GRAY_MED, "linewidth": 1.4, "alpha": 0.85, "label": "5-year"},
@@ -50,12 +60,43 @@ def _swd_axes(ax: plt.Axes) -> None:
     ax.spines["right"].set_visible(False)
     ax.spines["left"].set_color(GRAY_MED)
     ax.spines["bottom"].set_color(GRAY_MED)
-    ax.tick_params(axis="both", colors=TEXT, labelsize=10, length=0, pad=6)
+    ax.tick_params(axis="both", colors=TEXT, labelsize=TICK_SIZE, length=0, pad=4)
     ax.yaxis.grid(True, color=GRAY_LIGHT, linewidth=0.9)
     ax.set_axisbelow(True)
 
 
-def _legend_above_xaxis(ax: plt.Axes, entries: list[tuple], y: float = 0.08) -> None:
+def _blog_headlines(fig: plt.Figure, title: str, subtitle: str) -> None:
+    fig.text(
+        0.0,
+        1.0,
+        title,
+        fontsize=TITLE_SIZE,
+        fontweight="bold",
+        color=TEXT,
+        ha="left",
+        va="top",
+        transform=fig.transFigure,
+    )
+    fig.text(
+        0.0,
+        0.90,
+        subtitle,
+        fontsize=SUBTITLE_SIZE,
+        color=GRAY_MED,
+        ha="left",
+        va="top",
+        transform=fig.transFigure,
+    )
+
+
+def _blog_margins(fig: plt.Figure, *, dual_axis: bool = False) -> None:
+    if dual_axis:
+        fig.subplots_adjust(left=0.11, right=0.89, top=0.86, bottom=0.14)
+    else:
+        fig.subplots_adjust(left=0.10, right=0.98, top=0.86, bottom=0.14)
+
+
+def _legend_above_xaxis(ax: plt.Axes, entries: list[tuple], y: float = 0.06) -> None:
     if not entries:
         return
     width = 0.82
@@ -82,10 +123,14 @@ def _legend_above_xaxis(ax: plt.Axes, entries: list[tuple], y: float = 0.08) -> 
             transform=ax.transAxes,
             va="center",
             ha="left",
-            fontsize=10,
+            fontsize=LEGEND_SIZE,
             color=TEXT,
             clip_on=False,
         )
+
+
+def _save(fig: plt.Figure, path: Path) -> None:
+    fig.savefig(path, dpi=DPI, facecolor=BG, bbox_inches="tight", pad_inches=0.06)
 
 
 def _load_western_either() -> pd.DataFrame:
@@ -157,7 +202,7 @@ def _either_5yr_annual(western_either: pd.DataFrame) -> pd.DataFrame:
 
 
 def plot_either_change(western_either: pd.DataFrame, output_dir: Path) -> Path:
-    fig, ax = plt.subplots(figsize=(12, 5))
+    fig, ax = plt.subplots(figsize=(FIG_W, FIG_H_SINGLE))
     fig.patch.set_facecolor(BG)
     _swd_axes(ax)
 
@@ -179,37 +224,19 @@ def plot_either_change(western_either: pd.DataFrame, output_dir: Path) -> Path:
         lines.append((line, style["label"]))
         data_end = max(data_end, data["date"].max())
 
-    ax.text(
-        0.0,
-        1.08,
-        "Either-change rate: leader or coalition turnover, averaged across 20 Western democracies",
-        transform=ax.transAxes,
-        fontsize=10,
-        color=GRAY_MED,
-        va="bottom",
-        ha="left",
-        clip_on=False,
-    )
-    ax.text(
-        0.0,
-        1.0,
+    _blog_headlines(
+        fig,
         "Political turnover troughed in the 2000s, then rose again",
-        transform=ax.transAxes,
-        fontsize=14,
-        fontweight="bold",
-        color=TEXT,
-        va="bottom",
-        ha="left",
-        clip_on=False,
+        "Either-change rate: leader or coalition turnover, averaged across 20 Western democracies",
     )
-    ax.set_ylabel("Changes per year", fontsize=10)
-    ax.set_xlabel("Year", fontsize=10)
+    ax.set_ylabel("Changes per year", fontsize=LABEL_SIZE)
+    ax.set_xlabel("Year", fontsize=LABEL_SIZE)
     ax.set_xlim(PLOT_START.year, data_end.year + 0.5)
     _legend_above_xaxis(ax, lines)
-    fig.subplots_adjust(left=0.09, right=0.86, top=0.82, bottom=0.16)
+    _blog_margins(fig)
 
     path = output_dir / "either-change-rate.png"
-    fig.savefig(path, dpi=150, facecolor=BG)
+    _save(fig, path)
     plt.close(fig)
     return path
 
@@ -226,7 +253,7 @@ def plot_instability_vs_growth(western_either: pd.DataFrame, output_dir: Path) -
         .sort_values("year")
     )
 
-    fig, ax_instability = plt.subplots(figsize=(12.5, 5.8))
+    fig, ax_instability = plt.subplots(figsize=(FIG_W, FIG_H_DUAL))
     fig.patch.set_facecolor(BG)
     ax_growth = ax_instability.twinx()
     ax_instability.set_facecolor(BG)
@@ -248,33 +275,15 @@ def plot_instability_vs_growth(western_either: pd.DataFrame, output_dir: Path) -
         solid_capstyle="round",
     )
 
-    ax_instability.text(
-        0.0,
-        1.16,
-        "GDP growth = cross-country mean of year-on-year % changes, smoothed over 5 years",
-        transform=ax_instability.transAxes,
-        fontsize=10,
-        color=GRAY_MED,
-        va="bottom",
-        ha="left",
-        clip_on=False,
-    )
-    ax_instability.text(
-        0.0,
-        1.06,
+    _blog_headlines(
+        fig,
         "Instability rose after the 2000s while GDP growth trended lower",
-        transform=ax_instability.transAxes,
-        fontsize=14,
-        fontweight="bold",
-        color=TEXT,
-        va="bottom",
-        ha="left",
-        clip_on=False,
+        "GDP growth = cross-country mean of year-on-year % changes, smoothed over 5 years",
     )
 
-    ax_instability.set_ylabel("Either-changes per year", color=ACCENT, fontsize=10)
-    ax_growth.set_ylabel("GDP growth (%)", color=SECONDARY, fontsize=10)
-    ax_instability.set_xlabel("Year", fontsize=10)
+    ax_instability.set_ylabel("Either-changes per year", color=ACCENT, fontsize=LABEL_SIZE)
+    ax_growth.set_ylabel("GDP growth (%)", color=SECONDARY, fontsize=LABEL_SIZE)
+    ax_instability.set_xlabel("Year", fontsize=LABEL_SIZE)
     ax_instability.set_xlim(combined["year"].min() - 0.5, combined["year"].max() + 0.5)
     ax_instability.set_ylim(0, combined["either_change_rate"].max() * 1.45 + 0.05)
     growth_pad = max(
@@ -293,9 +302,9 @@ def plot_instability_vs_growth(western_either: pd.DataFrame, output_dir: Path) -
     ax_instability.spines["left"].set_color(ACCENT)
     ax_instability.spines["bottom"].set_color(GRAY_MED)
     ax_growth.spines["right"].set_color(SECONDARY)
-    ax_instability.tick_params(axis="y", colors=ACCENT, labelsize=10, length=0, pad=6)
-    ax_growth.tick_params(axis="y", colors=SECONDARY, labelsize=10, length=0, pad=6)
-    ax_instability.tick_params(axis="x", colors=TEXT, labelsize=10, length=0, pad=6)
+    ax_instability.tick_params(axis="y", colors=ACCENT, labelsize=TICK_SIZE, length=0, pad=4)
+    ax_growth.tick_params(axis="y", colors=SECONDARY, labelsize=TICK_SIZE, length=0, pad=4)
+    ax_instability.tick_params(axis="x", colors=TEXT, labelsize=TICK_SIZE, length=0, pad=4)
     ax_instability.yaxis.grid(True, color=GRAY_LIGHT, linewidth=0.9)
     ax_instability.set_axisbelow(True)
 
@@ -306,10 +315,10 @@ def plot_instability_vs_growth(western_either: pd.DataFrame, output_dir: Path) -
             (line_growth, "GDP growth (5-year)"),
         ],
     )
-    fig.subplots_adjust(left=0.09, right=0.88, top=0.82, bottom=0.16)
+    _blog_margins(fig, dual_axis=True)
 
     path = output_dir / "instability-vs-gdp-growth.png"
-    fig.savefig(path, dpi=150, facecolor=BG)
+    _save(fig, path)
     plt.close(fig)
     return path
 
@@ -342,7 +351,7 @@ def plot_instability_vs_stress(western_either: pd.DataFrame, output_dir: Path) -
         subset=["gdp_stress_lagged"]
     )
 
-    fig, ax_instability = plt.subplots(figsize=(12.5, 5.8))
+    fig, ax_instability = plt.subplots(figsize=(FIG_W, FIG_H_DUAL))
     fig.patch.set_facecolor(BG)
     ax_stress = ax_instability.twinx()
     ax_instability.set_facecolor(BG)
@@ -365,33 +374,15 @@ def plot_instability_vs_stress(western_either: pd.DataFrame, output_dir: Path) -
     )
 
     corr_bits = ", ".join(f"lag {lag}: r={lag_corrs[lag]:.2f}" for lag in range(0, 4))
-    ax_instability.text(
-        0.0,
-        1.16,
-        f"Correlations (instability vs stress): {corr_bits} – strongest at lag {best_lag}",
-        transform=ax_instability.transAxes,
-        fontsize=10,
-        color=GRAY_MED,
-        va="bottom",
-        ha="left",
-        clip_on=False,
-    )
-    ax_instability.text(
-        0.0,
-        1.06,
+    _blog_headlines(
+        fig,
         "GDP stress peaks often align with later instability",
-        transform=ax_instability.transAxes,
-        fontsize=14,
-        fontweight="bold",
-        color=TEXT,
-        va="bottom",
-        ha="left",
-        clip_on=False,
+        f"Correlations (instability vs stress): {corr_bits} – strongest at lag {best_lag}",
     )
 
-    ax_instability.set_ylabel("Either-changes per year", color=ACCENT, fontsize=10)
-    ax_stress.set_ylabel("GDP growth stress (pp)", color=SECONDARY, fontsize=10)
-    ax_instability.set_xlabel("Year", fontsize=10)
+    ax_instability.set_ylabel("Either-changes per year", color=ACCENT, fontsize=LABEL_SIZE)
+    ax_stress.set_ylabel("GDP growth stress (pp)", color=SECONDARY, fontsize=LABEL_SIZE)
+    ax_instability.set_xlabel("Year", fontsize=LABEL_SIZE)
     ax_instability.set_xlim(plot_df["year"].min() - 0.5, plot_df["year"].max() + 0.5)
     ax_instability.set_ylim(0, plot_df["either_change_rate"].max() * 1.45 + 0.05)
     stress_pad = max(plot_df["gdp_stress_lagged"].max() * 0.25, 0.3)
@@ -404,9 +395,9 @@ def plot_instability_vs_stress(western_either: pd.DataFrame, output_dir: Path) -
     ax_instability.spines["left"].set_color(ACCENT)
     ax_instability.spines["bottom"].set_color(GRAY_MED)
     ax_stress.spines["right"].set_color(SECONDARY)
-    ax_instability.tick_params(axis="y", colors=ACCENT, labelsize=10, length=0, pad=6)
-    ax_stress.tick_params(axis="y", colors=SECONDARY, labelsize=10, length=0, pad=6)
-    ax_instability.tick_params(axis="x", colors=TEXT, labelsize=10, length=0, pad=6)
+    ax_instability.tick_params(axis="y", colors=ACCENT, labelsize=TICK_SIZE, length=0, pad=4)
+    ax_stress.tick_params(axis="y", colors=SECONDARY, labelsize=TICK_SIZE, length=0, pad=4)
+    ax_instability.tick_params(axis="x", colors=TEXT, labelsize=TICK_SIZE, length=0, pad=4)
     ax_instability.yaxis.grid(True, color=GRAY_LIGHT, linewidth=0.9)
     ax_instability.set_axisbelow(True)
 
@@ -417,10 +408,10 @@ def plot_instability_vs_stress(western_either: pd.DataFrame, output_dir: Path) -
             (line_stress, f"GDP growth stress ({lag_years}yr lead)"),
         ],
     )
-    fig.subplots_adjust(left=0.09, right=0.88, top=0.82, bottom=0.16)
+    _blog_margins(fig, dual_axis=True)
 
     path = output_dir / "instability-vs-gdp-stress.png"
-    fig.savefig(path, dpi=150, facecolor=BG)
+    _save(fig, path)
     plt.close(fig)
     return path
 
